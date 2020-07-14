@@ -9,7 +9,7 @@ def call(Map stageParams) {
           ]])
       */
         
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+        checkout([$class: 'GitSCM', branches: [[name: 'master']],
     userRemoteConfigs: [[url: 'https://github.com/DevopsRizwan/spring-helm-demo.git']]])
         
         }
