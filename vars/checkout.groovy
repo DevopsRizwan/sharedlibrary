@@ -1,4 +1,4 @@
-def call(Map stageParams) {
+def call() {
 
         /*checkout([$class: 'GitSCM',
           userRemoteConfigs: [[name: 'origin', url: env.GIT_URL, credentialsId: ' ']],
