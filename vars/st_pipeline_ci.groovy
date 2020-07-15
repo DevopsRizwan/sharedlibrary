@@ -12,7 +12,7 @@ agent any
 
 stages {
 
-stage(clone) {
+stage("clone") {
 
 steps{
      
@@ -29,7 +29,7 @@ checkout([$class: 'GitSCM',
 
 }
 
-stage(clone) {
+stage("Build") {
 
 steps{
       
