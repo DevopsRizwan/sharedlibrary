@@ -14,7 +14,7 @@ import static groovy.json.JsonOutput.*
 * @param mvnPath -path of the projects pom.xml file 
 */
   def buildMvn( mvnPath ) {
-    steps.sh "mvn clean install -f  ${mvnPath}" -Dmaven.test.skip=true
+    steps.sh "mvn clean install -f  ${mvnPath} -Dmaven.test.skip=true"
   }
 
 /**
