@@ -25,10 +25,11 @@ stage("Build") {
 
    steps{
       
-     
+     script{
 
        buildfun.buildMvn("${param.mvnPath}")
 }
+   }
 
 }
 
