@@ -12,7 +12,7 @@ pipeline{
 spec:
   containers:
   - name: node
-    image: docker.io/node:latest
+    image: docker.io/maven:latest
     imagePullPolicy: Always
     command:
     - cat
@@ -46,7 +46,7 @@ stage("clone") {
 
 stage("Build") {
 
-   steps{
+  steps{
       
      script{
 
