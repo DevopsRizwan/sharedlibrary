@@ -11,7 +11,7 @@ pipeline{
    kind: "Pod"
 spec:
   containers:
-  - name: node
+  - name: maven
     image: docker.io/maven:latest
     imagePullPolicy: Always
     command:
