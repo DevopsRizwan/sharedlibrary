@@ -14,3 +14,9 @@ def buildfun = new Build(this)
 buildfun.buildMvn("${param.mvnPath}")
 
 }
+
+/*
+def build_cd(buildType){
+ println "$buildType"
+}
+*/
