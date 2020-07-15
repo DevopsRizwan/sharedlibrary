@@ -4,7 +4,30 @@ import static groovy.json.JsonOutput.*
 def call(Map param){
 def buildfun = new Build(this)
 pipeline{
-agent any
+  agent {
+    kubernetes {
+  yaml """
+   apiVersion: "v1"
+   kind: "Pod"
+spec:
+  containers:
+  - name: node
+    image: docker.io/node:latest
+    imagePullPolicy: Always
+    command:
+    - cat
+    tty: true
+  
+
+  nodeSelector:
+    env: jenkins
+  restartPolicy: "Never"
+  securityContext: {}
+  
+"""
+    }
+  
+  }
 stages {
 
 stage("clone") {
