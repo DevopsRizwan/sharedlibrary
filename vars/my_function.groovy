@@ -1,3 +1,3 @@
-def build_ci(buildType){
+def build_cd(buildType){
  println "$buildType"
 }
