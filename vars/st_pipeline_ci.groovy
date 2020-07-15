@@ -48,10 +48,10 @@ stage("Build") {
 
   steps{
       
-     script{
+    script{ container('maven'){
 
        buildfun.buildMvn("${param.mvnPath}")
-}
+    }}
    }
 
 }
