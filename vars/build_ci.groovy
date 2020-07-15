@@ -1,10 +1,13 @@
 import org.devopsgate.*
 import static groovy.json.JsonOutput.*
 
-def call(Map param) {
-    println prettyPrint(toJson(param))
-    def build = new Build(this)
-test = """
+// vars/sayHello.groovy
+def call(String name = 'human') {
+    // Any valid steps can be called from this code, just like in other
+    // Scripted Pipeline
+    echo "Hello, ${name}."
+}
+/*test = """
 apiVersion: "v1"
 kind: "Pod"
 spec:
@@ -23,7 +26,8 @@ spec:
   
 """
 pipeline {
-   agent {
+   agent any
+	{
     kubernetes{
           
           yaml test
@@ -58,4 +62,5 @@ pipeline {
            }
   }
 }
-}
+
+}*/
