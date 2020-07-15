@@ -1,6 +1,8 @@
 import org.devopsgate.*
+import static groovy.json.JsonOutput.* 
+  
 def call(Map param){
-
+def buildfun = new Build(this)
 pipeline{
 agent any
 stages {
@@ -23,7 +25,7 @@ stage("Build") {
 
    steps{
       
-     def buildfun = new Build(this)
+     
 
        buildfun.buildMvn("${param.mvnPath}")
 }
