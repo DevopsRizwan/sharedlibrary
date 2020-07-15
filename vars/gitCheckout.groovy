@@ -2,7 +2,7 @@ import org.devopsgate.*
 import static groovy.json.JsonOutput.*
 
 // vars/sayHello.groovy
-def call(Map params) {
+def call(Map param) {
           
           print "test"
 
