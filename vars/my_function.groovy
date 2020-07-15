@@ -1,6 +1,3 @@
-def build_ci(String buildType)
-
-{
+def build_ci(buildType){
  println "$buildType"
-
 }
