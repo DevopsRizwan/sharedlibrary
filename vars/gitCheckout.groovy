@@ -7,8 +7,8 @@ def call(Map params) {
           print "test"
 
 checkout([$class: 'GitSCM',
-          userRemoteConfigs: [[name: 'origin', url: env.GIT_URL, credentialsId: ' ']],
-          branches: [[name: env.GIT_BRANCH]],
+          userRemoteConfigs: [[name: 'origin', url: param.git_url, credentialsId: ' ']],
+          branches: [[name: param.git_branch]],
           extensions: [
             [$class: 'CloneOption', shallow: false, timeout: 60],
             [$class: 'WipeWorkspace']
