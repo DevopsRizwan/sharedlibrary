@@ -1,3 +1,9 @@
+import org.devopsgate.*
+import static groovy.json.JsonOutput.*
+
+// vars/sayHello.groovy
+def call(Map params) {
+
 checkout([$class: 'GitSCM',
           userRemoteConfigs: [[name: 'origin', url: env.GIT_URL, credentialsId: ' ']],
           branches: [[name: env.GIT_BRANCH]],
@@ -5,3 +11,4 @@ checkout([$class: 'GitSCM',
             [$class: 'CloneOption', shallow: false, timeout: 60],
             [$class: 'WipeWorkspace']
           ]])
+}
