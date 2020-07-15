@@ -27,7 +27,7 @@ spec:
 """
 pipeline {
    agent any
-	/*{
+	{
     kubernetes{
           
           yaml test
@@ -62,5 +62,5 @@ pipeline {
            }
   }
 }
-/
-}/*
+
+}*/
