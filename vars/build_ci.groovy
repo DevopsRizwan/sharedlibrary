@@ -23,12 +23,13 @@ spec:
   
 """
 pipeline {
-   agent {
+   agent any
+	/*{
     kubernetes{
           
           yaml test
     }
-   }
+   }*/
   stages {
   stage('checkout'){
         steps{          
