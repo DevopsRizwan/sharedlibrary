@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
-def call() {
+def call( String test) {
 
-        checkout([$class: 'GitSCM',
+       /* checkout([$class: 'GitSCM',
           userRemoteConfigs: [[name: 'origin', url: env.GIT_URL, credentialsId: ' ']],
           branches: [[name: env.GIT_BRANCH]],
           extensions: [
@@ -9,6 +9,8 @@ def call() {
             [$class: 'WipeWorkspace']
           ]])
      
-
+*/
+        
+        println "$test"
         
         }
